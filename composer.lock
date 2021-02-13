@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "346112832efd40cf20c6655ab23ee3e9",
+    "content-hash": "1b614c3dc66cb19bca2c2dadbeaddaec",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -7348,16 +7348,16 @@
         },
         {
             "name": "summerblue/generator",
-            "version": "8.0.2",
+            "version": "6.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/summerblue/generator.git",
-                "reference": "15565c6ca4e67d3bcba828b6d79a36f5f2c9b644"
+                "reference": "f2cec0dd70837e10d89524cd61ec904789d53e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/summerblue/generator/zipball/15565c6ca4e67d3bcba828b6d79a36f5f2c9b644",
-                "reference": "15565c6ca4e67d3bcba828b6d79a36f5f2c9b644",
+                "url": "https://api.github.com/repos/summerblue/generator/zipball/f2cec0dd70837e10d89524cd61ec904789d53e49",
+                "reference": "f2cec0dd70837e10d89524cd61ec904789d53e49",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7370,8 +7370,8 @@
                 "php": ">=7.0.0"
             },
             "require-dev": {
-                "laravel/laravel": "8.*",
-                "phpunit/phpunit": "^9.3.3"
+                "laravel/laravel": "6.*",
+                "phpunit/phpunit": "^8.0"
             },
             "type": "library",
             "extra": {
@@ -7397,7 +7397,7 @@
                 },
                 {
                     "name": "Summer",
-                    "email": "summer@learnku.com"
+                    "email": "summer@yousails.com"
                 }
             ],
             "description": "Extend Laravel's generators scaffold.",
@@ -7409,9 +7409,9 @@
             ],
             "support": {
                 "issues": "https://github.com/summerblue/generator/issues",
-                "source": "https://github.com/summerblue/generator/tree/8.0.2"
+                "source": "https://github.com/summerblue/generator/tree/6.0.2"
             },
-            "time": "2020-12-18T08:27:44+00:00"
+            "time": "2019-09-20T01:49:10+00:00"
         },
         {
             "name": "theseer/tokenizer",
