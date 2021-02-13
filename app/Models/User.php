@@ -6,10 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use Notifiable, MustVerifyEmailTrait;
+    use Notifiable, MustVerifyEmailTrait, HasRoles;
 
     /**
      * The attributes that are mass assignable.
