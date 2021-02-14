@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\Permission;
-use App\Models\Role;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class SeedRolesAndPermissionsData extends Migration
 {
@@ -19,18 +19,18 @@ class SeedRolesAndPermissionsData extends Migration
         app(Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
 
         // 先创建权限
-        Permission::create(['name' => 'manage_contents', 'guard_name' => 'web']);
-        Permission::create(['name' => 'manage_users', 'guard_name' => 'web']);
-        Permission::create(['name' => 'edit_settings', 'guard_name' => 'web']);
+        Permission::create(['name' => 'manage_contents']);
+        Permission::create(['name' => 'manage_users']);
+        Permission::create(['name' => 'edit_settings']);
 
         // 创建站长角色, 并赋予权限
-        $founder = Role::create(['name' => 'Founder', 'guard_name' => 'web']);
+        $founder = Role::create(['name' => 'Founder']);
         $founder->givePermissionTo('manage_contents');
         $founder->givePermissionTo('manage_users');
         $founder->givePermissionTo('edit_settings');
 
         // 创建管理员角色, 并赋予权限
-        $maintainer = Role::create(['name' => 'Maintainer', 'guard_name' => 'web']);
+        $maintainer = Role::create(['name' => 'Maintainer']);
         $maintainer->givePermissionTo('manage_contents');
     }
 

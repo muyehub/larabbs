@@ -16,6 +16,7 @@
         "mews/captcha": "^3.2",
         "overtrue/laravel-lang": "~3.0",
         "spatie/laravel-permission": "^4.0",
+        "summerblue/administrator": "6.*",
         "viacreative/sudo-su": "^1.1"
     },
     "require-dev": {
