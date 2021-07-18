@@ -35,9 +35,20 @@ return [
     */
 
     'channels' => [
+        'info' => [
+            //日志驱动模式
+            'driver' => 'daily',
+            //日志存放目录
+            'path' => storage_path('logs/laravel.log'),
+            //日志等级
+            'level' => 'info',
+            //日志分片周期，多少天一个文件
+            'days' => 1,
+        ],
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['daily'],
+            'tap' => [App\Logging\CustomizeFormatter::class],
             'ignore_exceptions' => false,
         ],
 
@@ -50,7 +61,7 @@ return [
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
-            'level' => 'debug',
+            'level' => 'info',
             'days' => 14,
         ],
 
